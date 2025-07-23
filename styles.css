@@ -1,0 +1,365 @@
+/* ОБРАЗОВАТЕЛЬНЫЙ ПРОЕКТ: НЕ ДЛЯ РЕАЛЬНОГО ИСПОЛЬЗОВАНИЯ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #1b2838;
+    color: #c6d4df;
+    min-height: 100vh;
+    background-image: url('https://store.steampowered.com/public/shared/images/joinsteam/acct_creation_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Header styles */
+.header {
+    background: #171a21;
+    height: 104px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+    align-items: center;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 44px;
+    margin-right: 40px;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav a {
+    color: #b8b6b4;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 10px;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #ffffff;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.cart-icon, .notification-icon {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-icon svg, .notification-icon svg {
+    fill: #b8b6b4;
+}
+
+.cart-icon:hover svg, .notification-icon:hover svg {
+    fill: #ffffff;
+}
+
+.install-btn {
+    background: #5c7e10;
+    color: #fff;
+    padding: 4px 15px;
+    border-radius: 2px;
+    text-decoration: none;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.login-btn {
+    color: #b8b6b4;
+    text-decoration: none;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.language-select {
+    background: transparent;
+    color: #b8b6b4;
+    border: none;
+    font-size: 12px;
+}
+
+/* Login container styles */
+.login-container {
+    max-width: 740px;
+    margin: 50px auto;
+    padding: 0 15px;
+}
+
+.login-box {
+    background: linear-gradient(to bottom, #32383e, #32383e);
+    border-radius: 3px;
+    padding: 24px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.login-box h1 {
+    color: #ffffff;
+    font-size: 34px;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+.login-form-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.login-left {
+    flex: 1;
+    min-width: 300px;
+    padding-right: 40px;
+}
+
+.login-right {
+    flex: 1;
+    min-width: 300px;
+    border-left: 1px solid #3b4b5e;
+    padding-left: 40px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    color: #1999ff;
+    font-size: 12px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    background: #32353c;
+    border: 1px solid #26282e;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 15px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+}
+
+.remember-me input {
+    margin-right: 5px;
+}
+
+.remember-me label {
+    margin-bottom: 0;
+    color: #b8b6b4;
+    font-weight: normal;
+}
+
+.login-submit-btn {
+    background: linear-gradient(to right, #06bfff 5%, #2b8efe 95%);
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    font-weight: bold;
+}
+
+.help-link {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.help-link a {
+    color: #afafaf;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.help-link a:hover {
+    color: #ffffff;
+}
+
+/* QR code section */
+.qr-section {
+    text-align: center;
+}
+
+.qr-section h2 {
+    color: #1999ff;
+    font-size: 12px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.qr-code {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 20px;
+}
+
+.qr-placeholder {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.qr-placeholder img {
+    width: 100%;
+    height: 100%;
+}
+
+.qr-refresh {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #32383e;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qr-refresh img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+}
+
+.qr-section p {
+    color: #afafaf;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.qr-section a {
+    color: #1999ff;
+    text-decoration: none;
+}
+
+/* Create account section */
+.create-account {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    margin-top: 30px;
+    padding: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.create-account-text {
+    flex: 2;
+    min-width: 300px;
+}
+
+.create-account-text h2 {
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.create-account-text p {
+    color: #afafaf;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.create-account-text a {
+    color: #1999ff;
+    text-decoration: none;
+}
+
+.create-account-button {
+    flex: 1;
+    min-width: 200px;
+    text-align: right;
+}
+
+.create-btn {
+    display: inline-block;
+    background: #5c7e10;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 2px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Educational notice */
+.educational-notice {
+    background: #ff4444;
+    color: white;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 800px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.educational-notice h2 {
+    margin-bottom: 10px;
+}
+
+.educational-notice p {
+    margin-bottom: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header {
+        height: auto;
+        padding: 10px;
+        flex-direction: column;
+    }
+    
+    .header-content {
+        margin-bottom: 10px;
+    }
+    
+    .login-left, .login-right {
+        padding: 0;
+        min-width: 100%;
+    }
+    
+    .login-right {
+        border-left: none;
+        border-top: 1px solid #3b4b5e;
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+} 

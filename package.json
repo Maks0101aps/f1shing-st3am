@@ -1,0 +1,23 @@
+{
+  "name": "steam-phishing-educational-demo",
+  "version": "1.0.0",
+  "description": "Educational demonstration of phishing techniques for cybersecurity awareness (NOT FOR MALICIOUS USE)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "educational",
+    "cybersecurity",
+    "phishing",
+    "awareness"
+  ],
+  "author": "Educational Project",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "body-parser": "^1.20.2"
+  },
+  "private": true,
+  "readme": "# Educational Phishing Demonstration\n\nThis project is STRICTLY for educational purposes to demonstrate how phishing attacks work.\nUsing such techniques for malicious purposes is illegal and unethical.\n\nRun locally only. Never deploy to a public server."
+} 

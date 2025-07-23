@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam - Вход</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- ОБРАЗОВАТЕЛЬНЫЙ ПРОЕКТ: НЕ ДЛЯ РЕАЛЬНОГО ИСПОЛЬЗОВАНИЯ -->
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="https://store.steampowered.com/public/shared/images/header/logo_steam.svg" alt="Steam Logo">
+            </div>
+            <div class="nav">
+                <a href="#">МАГАЗИН</a>
+                <a href="#">СООБЩЕСТВО</a>
+                <a href="#">ИНФОРМАЦИЯ</a>
+                <a href="#">ПОДДЕРЖКА</a>
+            </div>
+        </div>
+        <div class="header-right">
+            <a href="#" class="cart-icon">
+                <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 2C0 1.44772 0.447715 1 1 1H1.5C2.05228 1 2.5 1.44772 2.5 2V3H13.5C14.0523 3 14.5 3.44772 14.5 4C14.5 4.08176 14.4911 4.16322 14.4736 4.24254L12.4736 11.2425C12.3433 11.6877 11.9188 12 11.4472 12H4.55279C4.08124 12 3.65672 11.6877 3.52637 11.2425L1.52637 4.24254C1.37141 3.77427 1.65662 3.28068 2.12489 3.12573C2.20421 3.10824 2.28567 3.09934 2.36743 3.09934H2.5V2H1.5H1C0.447715 2 0 1.55228 0 1V2ZM4 14C4 14.5523 4.44772 15 5 15C5.55228 15 6 14.5523 6 14C6 13.4477 5.55228 13 5 13C4.44772 13 4 13.4477 4 14ZM11 15C10.4477 15 10 14.5523 10 14C10 13.4477 10.4477 13 11 13C11.5523 13 12 13.4477 12 14C12 14.5523 11.5523 15 11 15Z" fill="#C5C3C0"/>
+                </svg>
+            </a>
+            <a href="#" class="notification-icon">
+                <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 0C7.55228 0 8 0.447715 8 1V1.5C10.4853 1.5 12.5 3.51472 12.5 6V9.5C12.5 10.0523 12.9477 10.5 13.5 10.5C14.0523 10.5 14.5 10.9477 14.5 11.5C14.5 12.0523 14.0523 12.5 13.5 12.5H0.5C0.223858 12.5 0 12.2761 0 12C0 11.7239 0.223858 11.5 0.5 11.5H1.5C2.05228 11.5 2.5 11.0523 2.5 10.5V6C2.5 3.51472 4.51472 1.5 7 1.5V1C7 0.447715 7.44772 0 8 0H7ZM5 13.5C5 14.0523 5.44772 14.5 6 14.5H8C8.55228 14.5 9 14.0523 9 13.5C9 12.9477 8.55228 12.5 8 12.5H6C5.44772 12.5 5 12.9477 5 13.5Z" fill="#C5C3C0"/>
+                </svg>
+            </a>
+            <a href="#" class="install-btn">Установить Steam</a>
+            <a href="#" class="login-btn">ВОЙТИ</a>
+            <select class="language-select">
+                <option>ЯЗЫК ▼</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="login-container">
+        <div class="login-box">
+            <h1>Вход</h1>
+            
+            <div class="login-form-container">
+                <div class="login-left">
+                    <form id="loginForm" action="/login" method="POST">
+                        <div class="form-group">
+                            <label>ВОЙДИТЕ, ИСПОЛЬЗУЯ ИМЯ АККАУНТА</label>
+                            <input type="text" name="username" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>ПАРОЛЬ</label>
+                            <input type="password" name="password" required>
+                        </div>
+                        
+                        <div class="form-group remember-me">
+                            <input type="checkbox" id="remember" name="remember">
+                            <label for="remember">Запомнить меня</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="submit" class="login-submit-btn">Войти</button>
+                        </div>
+                        
+                        <div class="help-link">
+                            <a href="#">Помогите, я не могу войти в аккаунт</a>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="login-right">
+                    <div class="qr-section">
+                        <h2>ИЛИ QR-КОД</h2>
+                        <div class="qr-code">
+                            <div class="qr-placeholder">
+                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=SteamLoginDemo" alt="QR Code">
+                            </div>
+                            <div class="qr-refresh">
+                                <img src="https://store.steampowered.com/public/shared/images/refresh.png" alt="Refresh">
+                            </div>
+                        </div>
+                        <p>Используйте <a href="#">мобильное приложение Steam</a>, чтобы войти с помощью QR-кода</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="create-account">
+            <div class="create-account-text">
+                <h2>Первый раз в Steam?</h2>
+                <p>Это бесплатно и просто. Откройте для себя тысячи игр, в которые можно играть с миллионами новых друзей. <a href="#">Узнайте больше о Steam</a></p>
+            </div>
+            <div class="create-account-button">
+                <a href="#" class="create-btn">Создать аккаунт</a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
